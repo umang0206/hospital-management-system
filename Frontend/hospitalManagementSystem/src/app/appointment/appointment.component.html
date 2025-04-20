@@ -1,0 +1,65 @@
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+  <a style="color: white;" class="navbar-brand" href="#">SIDDHINATH HOSPITALS</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" style="color: white; cursor: pointer;" routerLink="/create-appointment">Add Appointment</a>
+      </li>
+    </ul>
+
+    <div class="d-flex align-items-center" style="margin-right: 10px;">
+      <a class="btn btn-info " style="margin-right: 10px;" routerLink="/admin">Back</a>
+      <a class="btn btn-danger" (click)="logout()">Logout</a>
+    </div>
+  </div>
+</nav>
+
+
+  
+  <div class="container">
+    <hr>
+    <h2 style="text-align: center;margin-top: 20PX;">Admin Dashboard</h2>
+    <a style="color: rgb(86, 86, 86); font-size: x-large;">
+      <marquee behavior="scroll" direction="left">
+        Welcome to Admin Dashboard. Please find the patient list below!!. Click Appointments to view and update
+        Appointments, Click Add Appointment to add new Appointment
+      </marquee>
+    </a>
+    <hr>
+  
+    <br>
+    <a style="color: rgb(86, 86, 86); font-size: xx-large;">Current Appointment List</a>
+    <div class="tableFixHead">
+      <br>
+  
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Symptoms</th>
+            <th>Number</th>
+      
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let appointment of appointments">
+            <td>{{appointment.id}}</td>
+            <td>{{appointment.name}}</td>
+            <td>{{appointment.age}}</td>
+            <td>{{appointment.symptoms}}</td>
+            <td>{{appointment.number}}</td>
+            <td>
+                <button class="btn btn-danger btn-sm" (click)="delete(appointment.id)">Delete</button>
+            </td>
+              
+        </tr>
+    </tbody>
+</table>

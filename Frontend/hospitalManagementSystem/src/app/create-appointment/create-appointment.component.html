@@ -1,0 +1,50 @@
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+    <a style="color: white;" class="navbar-brand" href="#">SIDDHINATH HOSPITALS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+         
+        </li>
+      </ul>
+  
+      <div class="d-flex align-items-center" style="margin-right: 10px;">
+        <a class="btn btn-info " style="margin-right: 10px;" routerLink="/appointment">Back</a>
+        <a class="btn btn-danger" (click)="logout()">Logout</a>
+      </div>
+    </div>
+  </nav>
+<div class="container">
+
+    <h2 class="text-center">Add New Appointment</h2>
+    <form (ngSubmit)="onSubmit()">
+    <!-- <form > -->
+
+        <div class="form-group">
+
+            <label > Name</label>
+            <input type="text" id="name" class="form-control" name="name" placeholder="Enter Name" [(ngModel)]="appointment.name">
+        </div>
+        <div class="form-group">
+
+            <label > Age</label>
+            <input type="text" id="age" class="form-control" name="age" placeholder="Enter Age" [(ngModel)]="appointment.age">
+        </div>
+        <div class="form-group">
+
+            <label > Symptoms</label>
+            <input type="text" id="symptoms" class="form-control" name="symptoms" placeholder="Enter symptoms" [(ngModel)]="appointment.symptoms">
+        </div>
+        <div class="form-group">
+
+            <label > Number</label>
+            <input type="text" id="number" class="form-control" name="number" placeholder="Enter Number" [(ngModel)]="appointment.number">
+        </div>
+        <button type="submit" class="btn btn-success"> Submit</button>
+    </form>
+
+</div>

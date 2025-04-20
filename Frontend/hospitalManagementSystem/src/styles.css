@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+.carousel-img {
+    object-fit: cover;
+    height: 80vh; /* ya jitna height chahiye */
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-img {
+      height: 60vh;
+    }
+  }
+  

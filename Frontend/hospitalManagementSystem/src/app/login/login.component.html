@@ -1,0 +1,43 @@
+<!-- Doctor Login Page -->
+
+<nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white fw-bold fs-4" href="#">SIDDHINATH HOSPITALS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active text-white" routerLink="/home">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Centered Login Card -->
+  <div class="d-flex align-items-center justify-content-center" style="min-height: 90vh;">
+    <div class="card shadow-lg rounded p-4" style="width: 100%; max-width: 450px;">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Login</h2>
+        <p class="text-muted">Please enter your credentials</p>
+      </div>
+  
+      <form>
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Username</label>
+          <input type="text" name="username" [(ngModel)]="username" class="form-control" placeholder="Enter username" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Password</label>
+          <input type="password" name="password" [(ngModel)]="password" class="form-control" placeholder="Enter password" required>
+        </div>
+        <div class="d-flex justify-content-between mt-4">
+          <button type="button" class="btn btn-success px-4" (click)="checkLogin()">Login</button>
+          <button type="button" class="btn btn-warning px-4" routerLink="/home">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
